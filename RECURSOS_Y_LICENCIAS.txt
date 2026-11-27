@@ -1,0 +1,9 @@
+RECURSOS Y REFERENCIAS
+Código, diseño de interfaz, composición CSS del laboratorio y textos: preparados para Edison Salinas, IBERO, noviembre de 2026. Sin fotografías de terceros ni servicios gráficos externos.
+Tipografías locales: Noto Sans Display, Noto Sans y DejaVu Sans Mono. Archivos y licencias originales en assets/fonts/LICENSES.txt.
+SHA-256: implementación local contrastada en las pruebas contra node:crypto. Referencia NIST FIPS 180-4: https://csrc.nist.gov/pubs/fips/180-4/upd1/final (consulta 25-11-2026). El uso de este algoritmo no constituye certificación ni aprobación del laboratorio por NIST.
+ZIP: contenedor local sin compresión, con CRC32 y nombres UTF-8, comprobado mediante zipfile.
+Referencia de despliegue: https://docs.netlify.com/deploy/create-deploys/ (consulta 25-11-2026).
+Los datos de contacto y necesidades proceden exclusivamente de la respuesta suministrada por el usuario.
+
+Actualización visual del 26-11-2026: assets/lab-system.svg es una ilustración vectorial original del ciclo contexto/instrucción/resultado/evidencia. El experimento de la portada calcula SHA-256 mediante Web Crypto, sin transferir ni almacenar el texto. No representa ejecuciones reales de agentes.

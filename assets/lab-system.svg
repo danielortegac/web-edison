@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="720" viewBox="0 0 960 720"><defs><pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#24263c" stroke-width="1"/></pattern><radialGradient id="halo"><stop stop-color="#5352ac" stop-opacity=".5"/><stop offset="1" stop-color="#121420" stop-opacity="0"/></radialGradient><linearGradient id="cube" x2="1" y2="1"><stop stop-color="#e3e5ff"/><stop offset="1" stop-color="#7974d2"/></linearGradient></defs><style>
+    .signal { opacity: 0; }
+    @media (prefers-reduced-motion: no-preference) {
+      .signal {
+        stroke-dasharray: .12 1;
+        stroke-dashoffset: .14;
+        animation: carry 1.28s cubic-bezier(.37,.11,.46,.92) both;
+      }
+      .outbound { animation-delay: 1.07s; }
+      .core-face { animation: core-light .72s ease-out 1s both; }
+      @keyframes carry {
+        0% { stroke-dashoffset: .14; opacity: 0; }
+        13% { opacity: 1; }
+        78% { opacity: 1; }
+        100% { stroke-dashoffset: -1.05; opacity: 0; }
+      }
+      @keyframes core-light {
+        45% { fill: #edffe7; }
+      }
+    }
+  </style><rect width="960" height="720" fill="#121420"/><rect width="960" height="720" fill="url(#grid)"/><ellipse cx="490" cy="375" rx="350" ry="280" fill="url(#halo)"/><g fill="none" stroke="#8e8db4" stroke-width="1"><ellipse cx="480" cy="370" rx="285" ry="160"/><ellipse cx="480" cy="370" rx="285" ry="160" transform="rotate(60 480 370)"/><ellipse cx="480" cy="370" rx="285" ry="160" transform="rotate(120 480 370)"/></g><g fill="none" stroke="#a7ecb1" stroke-width="2"><path d="M190 205H315L480 300M765 205H645L480 300M190 535h130l160-100M765 535H640L480 435"/></g><g fill="none" stroke="#ddffe1" stroke-width="5" stroke-linecap="round">
+    <path class="signal" pathLength="1" d="M190 205H315L480 300"/>
+    <path class="signal" pathLength="1" d="M765 205H645L480 300"/>
+    <path class="signal outbound" pathLength="1" d="M480 435 320 535H190"/>
+    <path class="signal outbound" pathLength="1" d="M480 435 640 535H765"/>
+  </g><g fill="#121420" stroke="#a7ecb1" stroke-width="2"><circle cx="190" cy="205" r="8"/><circle cx="765" cy="205" r="8"/><circle cx="190" cy="535" r="8"/><circle cx="765" cy="535" r="8"/></g><path d="m480 250 110 63v127l-110 64-110-64V313Z" fill="#272941" stroke="#b6b7ed" stroke-width="2"/><path d="m480 250 110 63-110 64-110-64Z" fill="url(#cube)"/><path d="m480 377 110-64v127l-110 64Z" fill="#59558b"/><path d="M480 377v127M370 313l110 64 110-64" fill="none" stroke="#d3d2fa" stroke-width="2"/><path class="core-face" d="m480 286 48 27-48 28-48-28Z" fill="#c6f1bf"/><g fill="#e3e5f0" font-family="monospace" font-size="18"><text x="98" y="165">CONTEXTO</text><text x="665" y="165">INSTRUCCIÓN</text><text x="100" y="585">RESULTADO</text><text x="668" y="585">EVIDENCIA</text></g><g fill="#9b9db4" font-family="monospace" font-size="14"><text x="45" y="52">ES / LAB · ARQUITECTURA DE TRABAJO</text><text x="45" y="675">Definir · Ejecutar con tu CLI · Comprobar</text></g></svg>

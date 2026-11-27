@@ -1,0 +1,63 @@
+EDISON SALINAS · LABORATORIO
+Proyecto personalizado de IBERO · Respuesta del 24 de noviembre de 2026
+
+ARCHIVOS PRINCIPALES
+index.html: presentación del laboratorio y recorrido de trabajo.
+enfoque.html: método, alcance y límites de la cadena local.
+herramientas.html: fichas, kits ZIP, bitácora, hashes y respaldos.
+contacto.html: borrador para correo.
+404.html: recuperación de navegación.
+
+PRIMER EXPERIMENTO
+1. En Kit de agentes, crea una ficha: objetivo, contexto, entradas, entregables, límites y criterios de aceptación. La CLI es un dato opcional que tú defines.
+2. Descarga el kit ZIP. Incluye README.md, contexto.json, plan.md, implementacion.md, revision.md y entrega.md. Cada fase contiene el contexto completo, no enlaces vacíos.
+3. Usa las instrucciones con tu propia CLI configurada, en una copia de trabajo. Revisa y aprueba cada fase.
+4. Registra en Bitácora la prueba real, el resultado observado y su evidencia. Un estado aprobado lo declara el usuario, no un evaluador automático.
+5. Añade una evidencia a Cadena local. Verifica y exporta el JSON.
+6. Modifica el contenido de un bloque en una COPIA del JSON sin recalcular hashes. Cárgala para verificar: la inconsistencia se detecta y tus registros no se modifican.
+7. Descarga el respaldo completo y prueba restaurarlo tras revisar y confirmar su contenido.
+
+QUÉ HACE EL LABORATORIO
+Fichas editables, instrucciones por fase, un ZIP válido sin bibliotecas externas, pruebas vinculadas a sus fichas y una cadena local SHA-256. No permite eliminar una ficha con pruebas asociadas hasta resolver la relación. Admite 1.000 fichas/pruebas combinadas y 200 bloques. Los bloques no tienen edición individual en el panel. Respaldo y archivo de verificación: hasta 5 MB.
+La verificación comprueba forma, identificadores, enlace previo y hash calculado. Cargar un archivo para comprobarlo no lo importa ni reemplaza la cadena guardada.
+
+ALCANCE DE LA CADENA LOCAL
+Es un ejercicio de integridad mediante hashes enlazados. No tiene nodos distribuidos, consenso, identidad verificada, firma digital ni anclaje externo. No prueba quién escribió ni que el contenido sea verdadero. Alguien con control de todo el archivo puede cambiarlo y recalcular todos los hashes: la coherencia interna por sí sola no prueba autenticidad.
+Una restauración válida puede reemplazar el estado completo tras la confirmación. Este laboratorio no se presenta como un registro inmutable certificado.
+
+CONEXIONES PENDIENTES
+No se ejecutan agentes, terminales, comandos ni llamadas a modelos. Para la siguiente fase hay que elegir una CLI, su proveedor, repositorio, un caso de uso concreto y cómo verificar su resultado. La respuesta indica blockchain e IA, pero no una red ni automatización específica; por eso no se inventaron tokens, contratos, billeteras ni transacciones.
+
+PUBLICAR EN NETLIFY
+1. Descomprime el ZIP individual.
+2. Ubica la carpeta que contiene index.html y assets.
+3. En el flujo de publicación manual de Netlify, arrastra esa carpeta completa.
+4. No hace falta npm, instalar paquetes ni ejecutar una compilación.
+5. Comprueba las cuatro páginas y descarga una copia de tus datos de prueba.
+Para publicación desde repositorio: directorio de publicación «.», sin comando de compilación. netlify.toml ya lo indica.
+Referencia oficial: https://docs.netlify.com/deploy/create-deploys/
+
+ABRIR Y PERSONALIZAR
+Puedes abrir index.html para revisar el contenido; la conservación de datos en direcciones file:// depende del navegador. Para el uso continuado utiliza el sitio servido con HTTPS y descarga respaldos. Cambiar la dirección, el navegador o el dispositivo no mueve tus datos.
+Edita los textos en los archivos HTML, la presentación en assets/styles.css y los enlaces opcionales en configuracion.js. No hay claves ni servicios de pago incorporados.
+Si configuracion.js mantiene formulario y agenda vacíos, esos accesos permanecen ocultos. Usa direcciones HTTPS completas cuando tengas un formulario o agenda propios.
+
+CONTACTO
+El formulario prepara un borrador y permite copiarlo o abrirlo en tu correo. Solo se envía cuando tú lo envías desde tu aplicación de correo. La web no almacena ni transmite consultas por su cuenta.
+
+DATOS Y COPIAS
+El almacenamiento pertenece a este navegador y a esta dirección web. No hay inicio de sesión ni separación de usuarios. Un panel local no equivale a un acceso privado.
+Si el almacenamiento no está disponible, la aplicación avisa y permite trabajar en memoria. Descarga una copia antes de cerrar. Una copia inválida no debe sustituir tus registros.
+Conserva respaldos antes de importar, cambiar de equipo o publicar en una dirección nueva. La restauración requiere revisar el archivo y confirmar el reemplazo.
+
+VERIFICACIÓN
+Incluye revisión estática de archivos, rutas y scripts; pruebas de lógica y flujos en DOM instrumentado con Node. No se realizó una revisión visual en navegador en este entorno. El ajuste final al contenido real debe comprobarse en escritorio y móvil antes de lanzar una operación real.
+
+ACTUALIZACIÓN DEL 26 DE NOVIEMBRE
+Los formularios muestran cambios sin guardar. Al cambiar de registro o cancelar una edición pendiente, puedes decidir si descartarla. Las exportaciones indican si solo incluirán el estado guardado. Se conserva el formato de respaldo de la primera entrega; se validan también sus límites de tamaño y contenido.
+Cambiar el texto o archivo de la cadena invalida el resultado anterior. Una lectura tardía de un archivo anterior se descarta y un archivo inválido muestra su error en el resultado de comprobación.
+El contenido guardable se limita para que una copia completa pueda recuperarse dentro del máximo de archivo publicado (5 MB). Una operación que lo supere se rechaza antes de cambiar los registros.
+
+PRESENTACIÓN Y NAVEGACIÓN ACTUALIZADAS
+Las páginas mantienen el motor y los formatos de datos. assets/premium.css contiene el diseño visual adicional; assets/experience.js añade las interacciones de presentación, los accesos al panel y ayudas de formulario. No cambies los identificadores de campos sin revisar sus scripts.
+La portada permite calcular y comparar huellas SHA-256 en el navegador. Requiere Web Crypto y una dirección segura compatible (como HTTPS en Netlify). El cálculo no guarda el texto ni lo añade a la cadena del laboratorio.

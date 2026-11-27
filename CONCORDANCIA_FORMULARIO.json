@@ -1,0 +1,106 @@
+{
+  "date": "2026-11-26",
+  "original_answer": {
+    "fecha": "24/11/2026, 7:04:48 p.m.",
+    "entrega": "Revisar envío de correo · respuesta guardadaActualizar estado",
+    "nombre": "EDISON SALINAS CAMACHO",
+    "email": "ing.edison.inc@gmail.com",
+    "pais": "Colombia",
+    "proyectos": "BLOCKCHAIN E IA",
+    "objetivos": "EXPERTICIA EN EL MANEJO DE AGENTES CLIs E IAs",
+    "estado_web": "no_tengo",
+    "web_deseos": "DINAMICA, ITERACTIVA Y FUNCIONAL",
+    "automatizacion": "—",
+    "experiencia_ia": "intermedio",
+    "crm": "Enviar al CRM"
+  },
+  "audit": {
+    "folder": "07_edison_salinas_laboratorio",
+    "name": "Edison Salinas Camacho",
+    "verdict": "La entrega corresponde a un laboratorio intermedio y funcional. El aprendizaje con CLI y el proyecto blockchain completo son parciales: requieren una herramienta configurada y un caso concreto que el formulario no especifica.",
+    "requirements": [
+      {
+        "source_field": "estado_web",
+        "quote": "no_tengo",
+        "need": "Disponer de una web propia desde cero.",
+        "status": "local",
+        "evidence": [
+          "index.html, enfoque.html, herramientas.html, contacto.html, 404.html",
+          "netlify.toml y recursos locales"
+        ],
+        "pending": "La carpeta está preparada para publicación; no se publicó en esta revisión.",
+        "coverage": "Hay cinco páginas completas con recursos locales y archivos preparados para publicar como sitio estático."
+      },
+      {
+        "source_field": "web_deseos",
+        "quote": "DINAMICA, ITERACTIVA Y FUNCIONAL",
+        "need": "Una web dinámica, interactiva y funcional.",
+        "status": "local",
+        "evidence": [
+          "assets/tool.js: formularios, navegación, kits y verificación",
+          "assets/model.js: save, kit, addBlock, verifyFile, restore"
+        ],
+        "pending": "Las funciones son locales; no hay cuentas ni estado compartido. La validación visual en dispositivos sigue pendiente.",
+        "coverage": "La web permite crear fichas, descargar kits, registrar pruebas y verificar o recuperar archivos de datos."
+      },
+      {
+        "source_field": "objetivos",
+        "quote": "EXPERTICIA EN EL MANEJO DE AGENTES CLIs E IAs",
+        "need": "Practicar el manejo de agentes CLI e IA.",
+        "status": "parcial",
+        "evidence": [
+          "assets/model.js: kit genera README, contexto y encargos de plan, implementación, revisión y entrega",
+          "herramientas.html: ficha y bitácora enlazadas",
+          "LEEME.txt: primer experimento"
+        ],
+        "pending": "Elegir/configurar CLI y proveedor, aportar repositorio/archivos y ejecutar una práctica real. La web prepara instrucciones y evidencia; no ejecuta terminales o modelos ni acredita experticia.",
+        "coverage": "Se prepara un kit con contexto y encargos de planificación, implementación, revisión y entrega. La bitácora vincula las pruebas a su ficha."
+      },
+      {
+        "source_field": "proyectos",
+        "quote": "BLOCKCHAIN E IA",
+        "need": "Explorar un proyecto relacionado con blockchain e IA.",
+        "status": "parcial",
+        "evidence": [
+          "assets/model.js: sha256, blockHash, verifyBlocks, chainFile y verifyFile",
+          "enfoque.html: explica continuidad y límites de una cadena local"
+        ],
+        "pending": "La demostración cubre hashes enlazados. Para una aplicación blockchain faltan propósito, red, actores, consenso/anclaje y pruebas externas; no hay wallet, firmas o transacciones.",
+        "coverage": "La cadena local calcula SHA-256 y comprueba orden, enlaces y contenido de sus bloques. Es un ejercicio de integridad."
+      },
+      {
+        "source_field": "automatizacion",
+        "quote": "—",
+        "need": "Delimitar una automatización concreta.",
+        "status": "no_especificado",
+        "evidence": [
+          "Formulario original sin automatización definida",
+          "LEEME.txt: CONEXIONES PENDIENTES"
+        ],
+        "pending": "Elegir una tarea o producto verificable con Edison; no se inventó una automatización financiera ni comercial.",
+        "coverage": "El laboratorio permite definir un experimento propio; no se asigna un producto o automatización que el alumno no haya elegido."
+      },
+      {
+        "source_field": "experiencia_ia",
+        "quote": "intermedio",
+        "need": "Un recorrido de trabajo acorde a experiencia intermedia.",
+        "status": "local",
+        "evidence": [
+          "enfoque.html: planificación, implementación, revisión y entrega",
+          "herramientas.html: bitácora de observado frente a esperado y verificación de una copia alterada"
+        ],
+        "pending": "La profundidad del siguiente ejercicio depende de la CLI, repositorio y caso de blockchain que elija.",
+        "coverage": "El recorrido pide criterios de aceptación, ejecución externa, observación y evidencia, acorde con una práctica intermedia."
+      }
+    ],
+    "changes": [],
+    "tests": [
+      {
+        "name": "Contraste de las funciones existentes con formulario y límites declarados",
+        "result": "PASS",
+        "method": "Lectura de modelo/UI/docs; no se cambió el código y no se repitió la batería funcional sin un riesgo nuevo."
+      }
+    ],
+    "design_review": "Identidad índigo/lavanda/lima y composición de laboratorio coherentes con experimentación. El contenido evita cifras de rendimiento, credenciales, transacciones o redes inventadas. El carácter dinámico procede de funciones JavaScript reales."
+  }
+}
