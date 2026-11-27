@@ -84,7 +84,7 @@ export default async (request: Request, context: { ip?: string }) => {
     return Response.json({ error: "La conversación es demasiado larga. Inicia un chat nuevo para continuar." }, { status: 413 });
   }
 
-  if (!process.env.OPENAI_API_KEY || !process.env.OPENAI_BASE_URL) {
+  if (!process.env.OPENAI_API_KEY) {
     return Response.json({ error: "El asistente aún no está conectado al servicio de IA. Inténtalo más tarde o contacta a Edison." }, { status: 503 });
   }
 
