@@ -1,5 +1,5 @@
 import OpenAI from "openai";
-import { SITE_KNOWLEDGE } from "./site-knowledge.mts";
+import { SITE_KNOWLEDGE } from "../../data/site-knowledge.mts";
 
 const MODEL = "gpt-6.2-astra";
 const WINDOW_MS = 5 * 60 * 1000;
