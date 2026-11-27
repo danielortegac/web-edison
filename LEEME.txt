@@ -61,3 +61,8 @@ El contenido guardable se limita para que una copia completa pueda recuperarse d
 PRESENTACIÓN Y NAVEGACIÓN ACTUALIZADAS
 Las páginas mantienen el motor y los formatos de datos. assets/premium.css contiene el diseño visual adicional; assets/experience.js añade las interacciones de presentación, los accesos al panel y ayudas de formulario. No cambies los identificadores de campos sin revisar sus scripts.
 La portada permite calcular y comparar huellas SHA-256 en el navegador. Requiere Web Crypto y una dirección segura compatible (como HTTPS en Netlify). El cálculo no guarda el texto ni lo añade a la cadena del laboratorio.
+
+ASISTENTE CONVERSACIONAL
+El asistente Edison Lab aparece en Inicio, Método, Herramientas, Contacto y 404. Su base de conocimiento está versionada en data/site-knowledge.mts y resume el contenido y los límites reales de las páginas. El navegador conversa con /api/chat; la llamada al modelo ocurre en una Netlify Function y nunca desde el cliente.
+El asistente utiliza OpenAI mediante Netlify AI Gateway cuando está habilitado o mediante la variable secreta OPENAI_API_KEY configurada en Netlify (scope Functions). Nunca pegues esa clave en archivos del repositorio ni en el chat público. Si no hay credenciales disponibles, el asistente informa que el servicio todavía no está conectado. El historial vive solo en memoria de la pestaña y no se guarda en localStorage.
+La función aplica una limitación básica de solicitudes por IP en memoria de instancia; antes de recibir tráfico alto conviene configurar también reglas de rate limiting en Netlify. La disponibilidad del modelo y el consumo dependen del servicio de IA habilitado en la cuenta.
