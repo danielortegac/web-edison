@@ -19,7 +19,7 @@
         <button type="button" data-prompt="¿Qué puedo hacer en este laboratorio?">¿Qué puedo hacer aquí?</button>
         <button type="button" data-prompt="Explícame cómo funciona el Kit de agentes CLI y cómo empezar.">Agentes CLI</button>
         <button type="button" data-prompt="¿Qué demuestra la cadena local SHA-256 y cuáles son sus límites?">Blockchain y SHA-256</button>
-        <button type="button" data-prompt="¿Cómo puedo contactar a Edison para hablar de mi proyecto?">Contactar a Edison</button>
+        <a class="edison-chat-quick-link" href="/contacto.html">Contactar a Edison ↗</a>
       </div>
       <p class="edison-chat-status" id="edison-chat-status" role="status"></p>
       <button class="edison-chat-reset" id="edison-chat-reset" type="button">Iniciar conversación nueva</button>
